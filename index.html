@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Inicio</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+     
+      <link rel="stylesheet" href="assets/css/main.css" />
+      <link rel="stylesheet" href="Css/style.css">
+</head>
+
+
+<body style="background-color: #ced5e8">
+
+
+
+      <div class="wrapper">
+            <header>
+                  <nav>
+                        <div class="menu-icon">
+                              <i class="fa fa-bars fa-2x"></i>
+                        </div>
+                        
+                        <div class="logo">UPAM</div>
+
+                        <div class="menu">
+                              <ul>
+                                    <li><a href="Login.html">LOG IN</a></li>
+                                    <li><a href="C_Archivo.php">Read</a></li>
+                              </ul>
+                        </div>
+                  </nav>
+            </header>
+           
+
+            <section >
+                      <div class="contenedor">
+                        <p> 
+                          <h1 align="center">The Polytechnic University of Amozoc</h1> 
+                            <h3>It is a Public Institution that belongs to the General Coordination of Technological and Polytechnic Universities. Which seeks to respond to the social needs of training professionals in a comprehensive manner, equipping them with the necessary skills to integrate into any work environment. The educational offer of this University favors learning through real situations.</h3>
+                        </p>
+                      </div>
+ 
+
+
+              <div class="col-sm-4" >
+                  <li>
+                    <a href="Quienes_Somos.html"><h2 align="center">ABOUT US?</h2> <img src="img/qs.png" height="265" width="400"></a>
+                  </li> 
+              </div>
+
+
+              <div class="col-sm-4" >
+                  <li>
+                    <a href="mision.html"><h2 align="center">MISSION</h2> <img src="img/mision.png" height="265" width="400"></a>
+                  </li> 
+              </div>
+
+
+              <div class="col-sm-4" >
+                  <li>
+                    <a href="vision.html"><h2 align="center">VIEW</h2> <img src="img/vision.png" height="265" width="400"></a>
+                  </li> 
+              </div>
+            
+            </section>
+            
+
+
+ <footer>
+
+  <div class="col-sm-12" style="font-size:20px;" style="color: #FFFFFF">
+    <p align="center">© 2018 Universidad Politécnica de  Amozoc  >>>  Llámanos: (222) 168 85 67  >>>   Fax: (222) 168 83 58  >>>  Av. Ampliacion Luis Oropeza No. 5202, San Andrés las Vegas 1ª Sección. , C.P. 72980</p>
+    
+    <p align="center">Contact information: <a href="https://www.upamozoc.edu.mx/">UPAM</a>.</p>
+  </div>
+
+
+</footer>
+
+
+
+       </div>
+
+
+      <script type="text/javascript" src="Js/jquery-1.12.0.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <script type="text/javascript">
+
+          // Menu-toggle button
+          $(document).ready(function() 
+          {
+                $('#txt-content').Editor();
+                $('#txt-content').Editor('setText', ['<p style="color:black;"></p>']);    
+                $(".menu-icon").on("click", function() 
+                {
+                      $("nav ul").toggleClass("showing");
+                });
+                $('#btn-enviar').click(function(e)
+                {
+                      e.preventDefault();
+                      $('#txt-content').text($('#txt-content').Editor('getText'));
+                      $('#frm-test').submit();                        
+                });
+          });
+
+          // Scrolling Effect
+          $(window).on("scroll", function() 
+          {
+                if($(window).scrollTop()) 
+                {
+                      $('nav').addClass('black');
+                }
+
+                else 
+                {
+                      $('nav').removeClass('black');
+                }
+          })
+      </script>
+</body>
+</html>

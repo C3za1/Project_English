@@ -1,0 +1,89 @@
+body
+{
+	margin: 0; /*margen*/
+	font-family: sans-serif; /* tipo de fuente */
+}
+
+header
+{
+	width: 100%;
+	background: #4E94AB; /*color azul*/
+}
+
+#btn-menu
+{
+	display: none;
+}
+
+header label
+{
+	display: none;
+	width: 30px;
+	height: 30px;
+	padding: 10px;
+	border-right: 1px solid #fff; /*borde blanco del derecho del boton*/
+}
+
+header label: hover /* cuado le pasa el mouse*/
+{
+	cursor: pointer;
+	background: rgba(0,0,0,0.3);
+}
+
+.menu ul /*menu de navegacion*/
+{
+	margin: 0;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: flex-end; /*mandar barra a la izqierda*/
+}
+
+.menu li{
+	border-right: 1px solid: #fff;
+}
+
+
+.menu li:hover{
+	background: rgba(0,0,0,0.3);
+}
+
+
+.menu li a {
+	display: block;
+	padding: 10px 15px; /*el primero es de los lados y el segundo es de largo */
+	color: #fff; /*color de las letras*/
+	text-decoration: none;
+}
+
+@media (max-width: 1440px)
+{
+	header label{
+		display: block;
+	}
+
+	.menu{
+		position: absolute;
+		background: #4E94AB;
+		width: 20%;
+		margin-left: -20%;
+		transition: all 0.5s;  /* tiempo que desaparece */
+		border-radius: 30px;
+		text-align: center;
+	}
+
+	.menu ul{
+		flex-direction: column;
+	}
+
+	.menu li {
+		border-top: 1px solid #fff; /* color de las letras */
+	}
+
+	#btn-menu:checked ~ .menu{ /* virgulilla ~ */ 
+		margin: 0;
+	}
+
+
+}
+
